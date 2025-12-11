@@ -36,7 +36,7 @@ def create_cube(x: int, y: int):
     for _ in range(y):
         print(row)
 
-
+#Задание 4
 create_cube(5, 3)
 
 print("-" * 10)
@@ -46,3 +46,13 @@ create_cube(8, 4)
 print("-" * 10)
 
 create_cube(10, 10)
+
+def double(s):
+    saaas = []
+    for simvol in s:
+        saaas.append(2 * simvol)
+    if saaas:
+        print("".join(saaas))
+
+
+double("stroka")
