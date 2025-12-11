@@ -10,9 +10,12 @@ while not proverka:
         proverka = False
         if deustvue == 1:
             pynkt = input("введите пункт заметки:")
-            cell = input("введите заметку:")
-            notebook[pynkt] = cell
-            print(notebook)
+            if pynkt in notebook:
+                print(f"Заметка {pynkt} уже есть в блокноте")
+            else:
+                cell = input("введите заметку:")
+                notebook[pynkt] = cell
+                print(notebook)
         elif deustvue == 2:
             if notebook == {}:
                 print("Заметок нет")
