@@ -29,3 +29,20 @@ def punct(txt):
 
 
 punct("(Как дела?)")
+
+#Задание 3
+def create_cube(x: int, y: int):
+    row = "*" * x
+    for _ in range(y):
+        print(row)
+
+
+create_cube(5, 3)
+
+print("-" * 10)
+
+create_cube(8, 4)
+
+print("-" * 10)
+
+create_cube(10, 10)
