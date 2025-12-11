@@ -18,7 +18,7 @@ while not proverka:
                 print("Заметок нет")
             else:
                 for pynkt, cell in notebook.items():
-                    print(f"Заметка: {pynkt}: {cell}")
+                    print(f"Заметка {pynkt}")
                 pynkt = input("введите пункт заметки:")
                 if pynkt in notebook:
                     print(f"заметка {pynkt}: {notebook[pynkt]}")
@@ -26,7 +26,7 @@ while not proverka:
                     print(f"пункта {pynkt} нет")
         elif deustvue == 3:
             for pynkt, cell in notebook.items():
-                print(f"Заметка: {pynkt}: {cell}")
+                print(f"Заметка {pynkt}")
             delite = input("введите пункт который хотите удалить:")
             notebook.pop(delite)
             print(notebook)
