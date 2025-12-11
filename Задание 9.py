@@ -14,13 +14,16 @@ while not proverka:
             notebook[pynkt] = cell
             print(notebook)
         elif deustvue == 2:
-            for pynkt, cell in notebook.items():
-                print(f"Заметка: {pynkt}: {cell}")
-            pynkt = input("введите пункт заметки:")
-            if pynkt in notebook:
-                print(f"заметка {pynkt}: {notebook[pynkt]}")
-            elif pynkt not in notebook:
-                print(f"пункта {pynkt} нет")
+            if notebook == {}:
+                print("Заметок нет")
+            else:
+                for pynkt, cell in notebook.items():
+                    print(f"Заметка: {pynkt}: {cell}")
+                pynkt = input("введите пункт заметки:")
+                if pynkt in notebook:
+                    print(f"заметка {pynkt}: {notebook[pynkt]}")
+                elif pynkt not in notebook:
+                    print(f"пункта {pynkt} нет")
         elif deustvue == 3:
             for pynkt, cell in notebook.items():
                 print(f"Заметка: {pynkt}: {cell}")
