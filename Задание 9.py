@@ -5,16 +5,18 @@ while not proverka:
         "[1]- сделать заметку. [2] - посмотреть заметки. [3] -удалить заметку. [4] -выход."
     )
     deustvue = int(input("введите действие которое хотите выполнить:"))
+
     if deustvue > 0 and deustvue < 5:
         proverka = False
         if deustvue == 1:
-            pynkt = input("введите пункт цели:")
-            cell = input("введите цель:")
+            pynkt = input("введите пункт заметки:")
+            cell = input("введите заметку:")
             notebook[pynkt] = cell
             print(notebook)
         elif deustvue == 2:
-            print("ваши заметки:")
-            print(notebook)
+            pynkt = input("введите пункт заметки:")
+            if pynkt in notebook:
+                print(f"заметка {pynkt}: {notebook[pynkt]}")
         elif deustvue == 3:
             delite = input("введите пункт который хотите удалить:")
             notebook.pop(delite)
@@ -24,3 +26,4 @@ while not proverka:
             proverka = True
     else:
         proverka = False
+
