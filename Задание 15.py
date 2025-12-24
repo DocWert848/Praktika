@@ -37,3 +37,18 @@ circle(120, 90)
 left(90)
 circle(120, 90)
 done()
+
+#Задание 5
+from turtle import *
+
+color("red", "yellow")
+begin_fill()
+
+for i in range(5):
+    forward(100)
+    left(72)
+    forward(100)
+    right(144)
+
+end_fill()
+done()
